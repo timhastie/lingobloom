@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LingoBloom Beta: privacy</title>
+<style>
+  body { font: 17px/1.55 -apple-system, system-ui, sans-serif; color: #1c1c1e; background: #fff; max-width: 40rem; margin: 0 auto; padding: 1.5rem; }
+  h1 { font-size: 1.7rem; } h2 { font-size: 1.2rem; margin-top: 2rem; }
+  .small { color: #6b6b70; font-size: 0.9rem; }
+  @media (prefers-color-scheme: dark) { body { color: #f2f2f7; background: #121418; } .small { color: #a0a0a8; } a { color: #8ab4ff; } }
+</style>
+</head>
+<body>
+<h1>LingoBloom Beta: privacy</h1>
+<p class="small">Last updated: 10 November 2026</p>
+
+<p>LingoBloom Beta is a test version of a language tutor for iPhone. You can only use it if someone invited you. This page says, in plain words, what the app sends off your phone, where it goes and what you can do about it.</p>
+
+<h2>What leaves your phone, and why</h2>
+<ul>
+  <li><strong>Your speech.</strong> When you speak in a lesson, the recording is sent to a transcription service (OpenAI) that turns it into text. The app needs this to understand what you said. Our server passes the recording on and does not save it.</li>
+  <li><strong>Your chat text.</strong> The text of your conversation with the tutor is sent to an AI model provider (Anthropic), which writes the tutor's replies and learning help. Our server passes it on and does not save it.</li>
+  <li><strong>Your account.</strong> You sign in with Apple or, where the app offers it, with Google. With Apple we receive an account identifier, the email address Apple shares with us (your own or Apple's private relay address, your choice) and, if Apple provides it, your name. With Google we receive your name, your email address and a Google account identifier, and nothing else: not your password, and nothing else from your Google account. The name is only used so that the person who invited you can tell testers apart.</li>
+  <li><strong>Your progress.</strong> Your course progress, your quiz words with their review dates and your learning settings are stored under your account, so they are still there if you change phones or reinstall the app.</li>
+  <li><strong>How much credit you used.</strong> Each lesson request costs a small amount. We keep a record of how much practice credit each account used and when, so that the monthly limit works. This record does not contain what you said or wrote. With each request it does keep a fingerprint: a fixed-length code (a SHA-256 checksum) worked out from the recording or the chat text. The server uses it to check that a request which is sent again is really the same request, so that nothing is run or charged twice. What you said or wrote cannot be read back from the fingerprint. Someone who has our database and already has the exact same text or recording could, however, confirm that it was sent.</li>
+  <li><strong>Voice downloads.</strong> The tutor's voices are downloaded to your phone from Hugging Face (huggingface.co and its file servers) when you choose them. As with any download, that service sees your internet address. Nothing about you, your account or your lessons is sent with the download.</li>
+</ul>
+
+<h2>What stays on your phone</h2>
+<p>Your saved chats, notes, the tutor's memory of you and the downloaded voices stay on your iPhone. They are not uploaded to your account. The tutor's voice is made on the phone itself.</p>
+
+<h2>Who handles your data</h2>
+<ul>
+  <li>OpenAI (speech to text): <a href="https://openai.com/policies/privacy-policy/">their privacy policy</a>.</li>
+  <li>Anthropic (the tutor's replies): <a href="https://www.anthropic.com/legal/privacy">their privacy policy</a>.</li>
+  <li>Supabase (hosts the accounts, the saved progress and the credit records): <a href="https://supabase.com/privacy">their privacy policy</a>.</li>
+  <li>Apple (sign-in and TestFlight): <a href="https://www.apple.com/legal/privacy/">their privacy policy</a>.</li>
+  <li>Google (sign-in, only if you choose Sign in with Google): <a href="https://policies.google.com/privacy">their privacy policy</a>.</li>
+  <li>Hugging Face (serves the voice downloads; receives no account or lesson data): <a href="https://huggingface.co/privacy">their privacy policy</a>.</li>
+</ul>
+<p>Nothing is sold, nothing is used for advertising and the app does not track you across other apps or websites.</p>
+
+<h2>Practice credit</h2>
+<p>The person who invited you pays for the lessons. Each tester has a limited amount of practice credit per month. When it is used up, lessons stop until the next month or until the person who invited you adds more.</p>
+
+<h2>Deleting your data</h2>
+<p>In the app, open your account page and choose Delete account. This deletes your account and the progress stored under it, and removes that account's data from your phone. A small record of how much credit the account used is kept, without your name, your email or anything you said or wrote, so that spending can still be added up and the monthly limit cannot be reset by signing up again. The fingerprints of your requests described above stay in that record, one per request. You can also remove LingoBloom from Sign in with Apple in your Apple Account settings or, if you signed in with Google, from the apps that have access to your Google Account.</p>
+
+<h2>Questions</h2>
+<p>Ask the person who invited you, or write to <a href="mailto:timhastie@gmail.com">timhastie@gmail.com</a>.</p>
+</body>
+</html>
